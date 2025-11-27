@@ -5,77 +5,61 @@
   <title>Pao · Portfolio 2025</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Fonts para el título "Hello" y texto general -->
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Pacifico&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Pacifico&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Stickers flotantes globales -->
+  <img src="sticker-basketball.svg" class="sticker basket-left">
+  <img src="sticker-star.svg" class="sticker star-right">
+  <img src="sticker-lightning.svg" class="sticker lightning-top">
+
   <header class="top-bar">
     <div class="top-logo">Pao · Portfolio 2025</div>
     <nav class="top-nav">
       <a href="#hero">Inicio</a>
       <a href="#resume">Resume</a>
+      <a href="#projects">Proyectos</a>
       <a href="#contact">Contacto</a>
     </nav>
   </header>
 
   <main>
-    <!-- HERO tipo "Hello + foto" -->
+
+    <!-- HERO -->
     <section id="hero" class="hero-retro">
-      <img src="sticker-basketball.svg" class="sticker basket-left">
-      <img src="sticker-star.svg" class="sticker star-right">
-      <img src="sticker-lightning.svg" class="sticker lightning-top">
-      <!-- Tarjeta con foto -->
+
+      <!-- Foto polaroid -->
       <div class="photo-card">
         <div class="photo-frame">
-          <!-- Cambia la URL de la imagen por una tuya si quieres -->
-          <img
-            src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Foto de Pao"
-          >
+          <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pao">
         </div>
         <div class="photo-sticker">Good Vibes</div>
       </div>
 
-      <!-- Texto "Hello" + descripción + contactos -->
+      <!-- Texto principal -->
       <div class="hero-text">
         <p class="hello-title">Hello</p>
         <p class="hello-subtitle">My name is <span class="highlight-pink">Pao</span></p>
 
         <p class="hero-description">
-          Soy estudiante de <strong>Ciencia de Datos</strong> con gusto por el diseño,
-          las historias visuales y los proyectos creativos. Disfruto convertir datos en
-          algo que la gente pueda entender, usar y, si se puede, disfrutar.
+          Soy estudiante de <strong>Ciencia de Datos</strong> con gusto por el diseño, las historias visuales y los proyectos creativos.
         </p>
-
         <p class="hero-description">
-          Me interesan temas como productos digitales, políticas públicas, análisis de datos
-          y experiencias centradas en las personas. Siempre estoy buscando proyectos nuevos
-          donde pueda mezclar <strong>código</strong>, <strong>diseño</strong> y
-          <strong>impacto social</strong>.
+          Me interesa crear proyectos donde mezclo código, diseño y análisis para comunicar ideas de forma clara, estética e impactante.
         </p>
 
         <div class="hero-contacts">
           <h2 id="contact">Contacts</h2>
           <ul>
-            <li>
-              <span class="contact-icon">@</span>
-              <span>tu.correo@example.com</span>
-            </li>
-            <li>
-              <span class="contact-icon">GH</span>
-              <a href="https://github.com/paooCaar" target="_blank">github.com/paooCaar</a>
-            </li>
-            <li>
-              <span class="contact-icon">IN</span>
-              <span>LinkedIn · próximamente</span>
-            </li>
+            <li><span class="contact-icon">@</span> tu.correo@example.com</li>
+            <li><span class="contact-icon">GH</span> <a href="https://github.com/paooCaar" target="_blank">github.com/paooCaar</a></li>
+            <li><span class="contact-icon">IN</span> LinkedIn próximamente</li>
           </ul>
         </div>
       </div>
@@ -89,151 +73,107 @@
       </div>
 
       <div class="resume-grid">
-        <!-- EDUCATION -->
+
         <div class="resume-column">
           <h3>Education</h3>
           <ul class="resume-list">
-            <li>
-              <strong>Ciencia de Datos</strong><br>
-              ITAM · Estudiante actual
-            </li>
-            <li>
-              <strong>Cursos y proyectos</strong><br>
-              Probabilidad, Álgebra Lineal, Bases de Datos, Machine Learning
-            </li>
+            <li><strong>Ciencia de Datos</strong><br>ITAM — Actual</li>
+            <li><strong>Cursos clave</strong><br>Probabilidad, BD, ML, Álgebra Lineal</li>
           </ul>
         </div>
 
-        <!-- EXPERIENCE -->
         <div class="resume-column">
           <h3>Experience</h3>
           <ul class="resume-list">
-            <li>
-              <strong>Proyecto 911 CDMX</strong><br>
-              Análisis de llamadas de emergencia y efectos del confinamiento.
-            </li>
-            <li>
-              <strong>Dashboards de energía</strong><br>
-              Visualización de datos de energía renovable en Europa.
-            </li>
-            <li>
-              <strong>Servicio social con niñas y niños</strong><br>
-              Actividades de lectura, valores y juegos educativos.
-            </li>
+            <li><strong>Dashboard 911 CDMX</strong><br>Análisis de emergencias</li>
+            <li><strong>EcoBici PySpark</strong><br>Movilidad y duración de viajes</li>
+            <li><strong>Servicio Social</strong><br>Actividades educativas</li>
           </ul>
         </div>
 
-        <!-- LANGUAGES -->
         <div class="resume-column">
           <h3>Languages</h3>
           <ul class="resume-list">
-            <li><strong>Spanish:</strong> Native</li>
-            <li><strong>English:</strong> Advanced</li>
+            <li>Spanish: Native</li>
+            <li>English: Advanced</li>
           </ul>
         </div>
 
-        <!-- SKILLS -->
         <div class="resume-column">
           <h3>Skills</h3>
           <ul class="resume-list">
-            <li>Data analysis & visualization</li>
-            <li>SQL & relational databases</li>
-            <li>Python para ciencia de datos</li>
-            <li>Storytelling y presentaciones</li>
+            <li>Análisis de datos</li>
+            <li>Python & SQL</li>
+            <li>Visualización</li>
+            <li>Diseño & Storytelling</li>
           </ul>
         </div>
 
-        <!-- SOFTWARE -->
         <div class="resume-column">
           <h3>Software</h3>
           <ul class="software-list">
-            <li>
-              <span>Python</span>
-              <span class="bar bar-4"></span>
-            </li>
-            <li>
-              <span>PostgreSQL / SQL</span>
-              <span class="bar bar-4"></span>
-            </li>
-            <li>
-              <span>Tableau / Dashboards</span>
-              <span class="bar bar-3"></span>
-            </li>
-            <li>
-              <span>Git &amp; GitHub</span>
-              <span class="bar bar-3"></span>
-            </li>
-            <li>
-              <span>Canva / Diseño</span>
-              <span class="bar bar-3"></span>
-            </li>
+            <li><span>Python</span><span class="bar bar-4"></span></li>
+            <li><span>SQL</span><span class="bar bar-4"></span></li>
+            <li><span>Tableau</span><span class="bar bar-3"></span></li>
+            <li><span>Git/GitHub</span><span class="bar bar-3"></span></li>
+            <li><span>Canva/Figma</span><span class="bar bar-3"></span></li>
           </ul>
         </div>
+
       </div>
     </section>
+
+    <!-- PROYECTOS -->
+    <section id="projects" class="projects-section">
+
+      <!-- Stickers flotantes -->
+      <img src="sticker-basketball.svg" class="sticker basket-project">
+      <img src="sticker-star.svg" class="sticker star-project">
+      <img src="sticker-lightning.svg" class="sticker lightning-project">
+
+      <div class="projects-header">
+        <h2>My Projects</h2>
+        <p class="projects-subtitle">Una selección morada ✨ de mis proyectos favoritos</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card project-1">
+          <div class="project-number">01</div>
+          <h3>911 CDMX</h3>
+          <p>Análisis de llamadas de emergencia y efectos del confinamiento.</p>
+          <a href="#" class="project-link">Ver más →</a>
+        </article>
+
+        <article class="project-card project-2">
+          <div class="project-number">02</div>
+          <h3>EcoBici PySpark</h3>
+          <p>Movilidad urbana, duración de viajes y disponibilidad.</p>
+          <a href="#" class="project-link">Ver más →</a>
+        </article>
+
+        <article class="project-card project-3">
+          <div class="project-number">03</div>
+          <h3>Endangered Animals</h3>
+          <p>Dashboard educativo sobre especies en riesgo.</p>
+          <a href="#" class="project-link">Ver más →</a>
+        </article>
+
+        <article class="project-card project-4">
+          <div class="project-number">04</div>
+          <h3>Cableado CDMX</h3>
+          <p>Propuesta de política pública para un cableado ordenado.</p>
+          <a href="#" class="project-link">Ver más →</a>
+        </article>
+
+      </div>
+    </section>
+
   </main>
 
-<!-- PROJECTS SECTION -->
-<section id="projects" class="projects-section">
-  <img src="sticker-basketball.svg" class="sticker basket-project">
-  <img src="sticker-star.svg" class="sticker star-project">
-  <img src="sticker-lightning.svg" class="sticker lightning-project">
-
-  <div class="projects-header">
-    <h2>My Projects</h2>
-    <p class="projects-subtitle">
-      Una selección de mis proyectos favoritos, combinando datos, diseño y creatividad 📊🎨
-    </p>
-  </div>
-
-  <div class="projects-grid">
-
-    <!-- Proyecto 1 -->
-    <article class="project-card project-1">
-      <div class="project-number">01</div>
-      <h3>Dashboard: 911 CDMX</h3>
-      <p>
-        Análisis detallado de llamadas de emergencia: patrones temporales, zonas críticas y efectos del confinamiento.
-      </p>
-      <a href="#" class="project-link">Ver más →</a>
-    </article>
-
-    <!-- Proyecto 2 -->
-    <article class="project-card project-2">
-      <div class="project-number">02</div>
-      <h3>EcoBici CDMX</h3>
-      <p>
-        Estudio de duración, rutas y disponibilidad utilizando PySpark y geodatos del sistema ECOBICI.
-      </p>
-      <a href="#" class="project-link">Ver más →</a>
-    </article>
-
-    <!-- Proyecto 3 -->
-    <article class="project-card project-3">
-      <div class="project-number">03</div>
-      <h3>Endangered Animals Dashboard</h3>
-      <p>
-        Dashboard educativo sobre especies en peligro, diseñado para estudiantes y divulgación ambiental.
-      </p>
-      <a href="#" class="project-link">Ver más →</a>
-    </article>
-
-    <!-- Proyecto 4 -->
-    <article class="project-card project-4">
-      <div class="project-number">04</div>
-      <h3>Política Pública: Cableado CDMX</h3>
-      <p>
-        Propuesta integral para retirar cableado aéreo y reordenarlo bajo tierra, con análisis comparativo urbano.
-      </p>
-      <a href="#" class="project-link">Ver más →</a>
-    </article>
-
-  </div>
-</section>
-
-
   <footer class="site-footer">
-    <p>Hecho con 💖 por Pao · Hosteado en GitHub Pages</p>
+    <p>Hecho con 💜 por Pao · GitHub Pages</p>
   </footer>
+
 </body>
 </html>
