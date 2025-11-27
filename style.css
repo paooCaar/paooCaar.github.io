@@ -386,3 +386,85 @@ body {
 .project-4 {
   background: #ff6b6b; /* rosa-rojo */
 }
+/* -------------------------------------- */
+/*  STICKERS FLOTA ANIMADOS                */
+/* -------------------------------------- */
+
+.sticker {
+  position: absolute;
+  width: 80px;
+  opacity: 0.9;
+  pointer-events: none;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Posiciones hero */
+.basket-left {
+  top: 130px;
+  left: -10px;
+  transform: rotate(-8deg);
+}
+
+.star-right {
+  top: 80px;
+  right: 20px;
+  width: 95px;
+}
+
+.lightning-top {
+  top: -20px;
+  right: 180px;
+  width: 70px;
+  transform: rotate(10deg);
+}
+
+/* Posiciones projects */
+.basket-project {
+  top: 1000px;
+  left: 20px;
+  width: 90px;
+}
+
+.star-project {
+  top: 950px;
+  right: 40px;
+  width: 120px;
+  transform: rotate(-5deg);
+}
+
+.lightning-project {
+  top: 1080px;
+  right: 160px;
+  width: 80px;
+  transform: rotate(15deg);
+}
+
+/* -------------------------------------- */
+/*  PALETA MORADA PARA PROJECT CARDS       */
+/* -------------------------------------- */
+
+.project-card {
+  color: white;
+}
+
+.project-1 {
+  background: #6f5cff; /* morado azulado */
+}
+
+.project-2 {
+  background: #9d7bff; /* morado suave */
+}
+
+.project-3 {
+  background: #b89aff; /* pastel morado */
+}
+
+.project-4 {
+  background: #5a2ea6; /* morado profundo */
+}
