@@ -8,7 +8,7 @@
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Pacifico&family=Caveat:wght@400;600;700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -33,47 +33,75 @@
 
   <main>
 
-    <!-- HERO -->
-    <section id="hero" class="hero-retro">
-
-      <!-- Foto polaroid -->
-      <div class="photo-card">
-        <div class="photo-frame">
-          <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pao">
-        </div>
-        <div class="photo-sticker">Good Vibes</div>
-      </div>
-
-      <!-- Texto principal -->
-      <div class="hero-text">
-        <p class="hello-title">Hello</p>
-        <p class="hello-subtitle">My name is <span class="highlight-pink">Pao</span></p>
-
-        <p class="hero-description">
-          Soy estudiante de <strong>Ciencia de Datos</strong> con gusto por el diseño, las historias visuales y los proyectos creativos.
-        </p>
-        <p class="hero-description">
-          Me interesa crear proyectos donde mezclo código, diseño y análisis para comunicar ideas de forma clara, estética e impactante.
-        </p>
-        <div style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, rgba(178, 138, 255, 0.1), rgba(90, 46, 166, 0.1)); border-radius: 1rem; border-left: 4px solid var(--accent-purple);">
-          <p style="font-style: italic; color: var(--accent-purple-dark); font-weight: 500; margin: 0;">
-            🏀 Amante del básquet · 💃 Apasionada del baile
-          </p>
-        </div>
-
-        <div class="hero-contacts">
-          <h2 id="contact">Contacts</h2>
-          <ul>
-            <li><span class="contact-icon">@</span> tu.correo@example.com</li>
-            <li><span class="contact-icon">GH</span> <a href="https://github.com/paooCaar" target="_blank">github.com/paooCaar</a></li>
-            <li><span class="contact-icon">IN</span> LinkedIn próximamente</li>
-          </ul>
-        </div>
+    <!-- TÍTULO PRINCIPAL -->
+    <section class="portfolio-title-section">
+      <h1 class="portfolio-main-title">Portfolio</h1>
+      <div class="title-decorations">
+        <div class="decoration-line"></div>
+        <div class="decoration-star">✨</div>
+        <div class="decoration-circle">○</div>
       </div>
     </section>
 
-    <!-- RESUME -->
-    <section id="resume" class="resume-section">
+    <!-- SECCIÓN BLANCA CENTRAL -->
+    <section class="white-section torn-paper">
+      
+      <!-- HERO -->
+      <div id="hero" class="hero-retro">
+
+        <!-- Foto polaroid -->
+        <div class="photo-card">
+          <div class="photo-frame">
+            <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pao">
+          </div>
+        </div>
+
+        <!-- Texto principal -->
+        <div class="hero-text">
+          <h2 class="about-me-title">About me</h2>
+          <p class="hero-description">
+            Hey, soy <strong>Pao</strong>, estudiante de <strong>Ciencia de Datos</strong> con gusto por el diseño, las historias visuales y los proyectos creativos. Me interesa crear proyectos donde mezclo código, diseño y análisis para comunicar ideas de forma clara, estética e impactante. Más allá de la pantalla, soy alguien que escucha profundamente y colabora fácilmente. Y sí, trabajo bien bajo presión y siempre trato de cumplir con los plazos. Y lo más importante, creo que un gran diseño no es solo lo que ves, es cómo hace sentir a las personas y qué tan bien resuelve un problema.
+          </p>
+          <div style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, rgba(178, 138, 255, 0.1), rgba(90, 46, 166, 0.1)); border-radius: 1rem; border-left: 4px solid var(--accent-purple);">
+            <p style="font-style: italic; color: var(--accent-purple-dark); font-weight: 500; margin: 0;">
+              🏀 Amante del básquet · 💃 Apasionada del baile
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de Software, Experience y Contacts -->
+      <div class="info-sections">
+        <div class="info-section">
+          <h3 class="section-handwritten">Software</h3>
+          <div class="software-icons">
+            <div class="software-icon" style="background: #4A90E2;">Py</div>
+            <div class="software-icon" style="background: #FF6B35;">SQL</div>
+            <div class="software-icon" style="background: #9B59B6;">Tab</div>
+          </div>
+        </div>
+
+        <div class="info-section">
+          <h3 class="section-handwritten">Experience</h3>
+          <ul class="experience-list">
+            <li><strong>Dashboard 911 CDMX</strong><br>Análisis de emergencias</li>
+            <li><strong>EcoBici PySpark</strong><br>Movilidad y duración de viajes</li>
+            <li><strong>Servicio Social</strong><br>Actividades educativas</li>
+          </ul>
+        </div>
+
+        <div class="info-section">
+          <h3 class="section-handwritten" id="contact">Contacts</h3>
+          <ul class="contacts-list">
+            <li><span class="contact-icon-small">@</span> tu.correo@example.com</li>
+            <li><span class="contact-icon-small">GH</span> <a href="https://github.com/paooCaar" target="_blank">github.com/paooCaar</a></li>
+            <li><span class="contact-icon-small">IN</span> LinkedIn próximamente</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- RESUME -->
+      <section id="resume" class="resume-section">
       <div class="resume-header">
         <span class="resume-pill">You can</span>
         <h2>Resume</h2>
@@ -128,6 +156,8 @@
         </div>
 
       </div>
+      </section>
+
     </section>
 
     <!-- PROYECTOS -->
@@ -148,28 +178,28 @@
       <div class="projects-grid">
 
         <article class="project-card project-1">
-          <div class="project-number">01</div>
+          <div class="project-number">1</div>
           <h3>911 CDMX</h3>
           <p>Análisis de llamadas de emergencia y efectos del confinamiento.</p>
           <a href="#" class="project-link">Ver más →</a>
         </article>
 
         <article class="project-card project-2">
-          <div class="project-number">02</div>
+          <div class="project-number">2</div>
           <h3>EcoBici PySpark</h3>
           <p>Movilidad urbana, duración de viajes y disponibilidad.</p>
           <a href="#" class="project-link">Ver más →</a>
         </article>
 
         <article class="project-card project-3">
-          <div class="project-number">03</div>
+          <div class="project-number">3</div>
           <h3>Endangered Animals</h3>
           <p>Dashboard educativo sobre especies en riesgo.</p>
           <a href="#" class="project-link">Ver más →</a>
         </article>
 
         <article class="project-card project-4">
-          <div class="project-number">04</div>
+          <div class="project-number">4</div>
           <h3>Cableado CDMX</h3>
           <p>Propuesta de política pública para un cableado ordenado.</p>
           <a href="#" class="project-link">Ver más →</a>
