@@ -8,203 +8,123 @@
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Pacifico&family=Caveat:wght@400;600;700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Caveat:wght@400;600;700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Stickers flotantes globales -->
-  <img src="sticker-basketball.svg" class="sticker basket-left" alt="Basketball">
-  <img src="sticker-hoop.svg" class="sticker hoop-sticker" style="top: 200px; right: 50px; width: 100px;" alt="Basketball Hoop">
-  <img src="sticker-dance.svg" class="sticker dance-sticker" style="top: 350px; left: 50px; width: 90px;" alt="Dance">
-  <img src="sticker-star.svg" class="sticker star-right" alt="Star">
-  <img src="sticker-lightning.svg" class="sticker lightning-top" alt="Lightning">
-
   <header class="top-bar">
-    <div class="top-logo">Pao · Portfolio 2025</div>
+    <div class="top-logo">Pao</div>
     <nav class="top-nav">
-      <a href="#hero">Inicio</a>
-      <a href="#resume">Resume</a>
-      <a href="#projects">Proyectos</a>
-      <a href="#contact">Contacto</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
+    <!-- HERO CENTRAL CON FOTO -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <!-- Foto central grande -->
+        <div class="hero-image-wrapper">
+          <div class="hero-image-frame">
+            <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pao" class="hero-image">
+            <div class="image-badge">MÉXICO</div>
+            <div class="image-number">9</div>
+          </div>
+        </div>
 
-    <!-- TÍTULO PRINCIPAL -->
-    <section class="portfolio-title-section">
-      <h1 class="portfolio-main-title">Portfolio</h1>
-      <div class="title-decorations">
-        <div class="decoration-line"></div>
-        <div class="decoration-star">✨</div>
-        <div class="decoration-circle">○</div>
+        <!-- Texto alrededor -->
+        <div class="hero-content">
+          <h1 class="hero-title">Portfolio</h1>
+          <p class="hero-subtitle">Data Science · Design · Basketball · Dance</p>
+        </div>
       </div>
     </section>
 
-    <!-- SECCIÓN BLANCA CENTRAL -->
-    <section class="white-section torn-paper">
-      
-      <!-- HERO -->
-      <div id="hero" class="hero-retro">
-
-        <!-- Foto polaroid -->
-        <div class="photo-card">
-          <div class="photo-frame">
-            <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pao">
-          </div>
-        </div>
-
-        <!-- Texto principal -->
-        <div class="hero-text">
-          <h2 class="about-me-title">About me</h2>
-          <p class="hero-description">
-            Hey, soy <strong>Pao</strong>, estudiante de <strong>Ciencia de Datos</strong> con gusto por el diseño, las historias visuales y los proyectos creativos. Me interesa crear proyectos donde mezclo código, diseño y análisis para comunicar ideas de forma clara, estética e impactante. Más allá de la pantalla, soy alguien que escucha profundamente y colabora fácilmente. Y sí, trabajo bien bajo presión y siempre trato de cumplir con los plazos. Y lo más importante, creo que un gran diseño no es solo lo que ves, es cómo hace sentir a las personas y qué tan bien resuelve un problema.
+    <!-- SECCIÓN BLANCA CON INFORMACIÓN -->
+    <section id="about" class="white-section">
+      <div class="content-wrapper">
+        <h2 class="section-title handwritten">About me</h2>
+        <div class="about-content">
+          <p class="about-text">
+            Hey, soy <strong>Pao</strong>, estudiante de <strong>Ciencia de Datos</strong> con gusto por el diseño, las historias visuales y los proyectos creativos. Me interesa crear proyectos donde mezclo código, diseño y análisis para comunicar ideas de forma clara, estética e impactante.
           </p>
-          <div style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, rgba(178, 138, 255, 0.1), rgba(90, 46, 166, 0.1)); border-radius: 1rem; border-left: 4px solid var(--accent-purple);">
-            <p style="font-style: italic; color: var(--accent-purple-dark); font-weight: 500; margin: 0;">
-              🏀 Amante del básquet · 💃 Apasionada del baile
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sección de Software, Experience y Contacts -->
-      <div class="info-sections">
-        <div class="info-section">
-          <h3 class="section-handwritten">Software</h3>
-          <div class="software-icons">
-            <div class="software-icon" style="background: #4A90E2;">Py</div>
-            <div class="software-icon" style="background: #FF6B35;">SQL</div>
-            <div class="software-icon" style="background: #9B59B6;">Tab</div>
+          <p class="about-text">
+            Más allá de la pantalla, soy alguien que escucha profundamente y colabora fácilmente. Y sí, trabajo bien bajo presión y siempre trato de cumplir con los plazos. Y lo más importante, creo que un gran diseño no es solo lo que ves, es cómo hace sentir a las personas y qué tan bien resuelve un problema.
+          </p>
+          <div class="passions-badge">
+            🏀 Amante del básquet · 💃 Apasionada del baile
           </div>
         </div>
 
-        <div class="info-section">
-          <h3 class="section-handwritten">Experience</h3>
-          <ul class="experience-list">
-            <li><strong>Dashboard 911 CDMX</strong><br>Análisis de emergencias</li>
-            <li><strong>EcoBici PySpark</strong><br>Movilidad y duración de viajes</li>
-            <li><strong>Servicio Social</strong><br>Actividades educativas</li>
-          </ul>
-        </div>
+        <!-- Secciones en fila -->
+        <div class="info-grid">
+          <div class="info-card">
+            <h3 class="handwritten">Software</h3>
+            <div class="software-grid">
+              <div class="software-box" style="background: #4A90E2;">Py</div>
+              <div class="software-box" style="background: #FF6B35;">SQL</div>
+              <div class="software-box" style="background: #9B59B6;">Tab</div>
+            </div>
+          </div>
 
-        <div class="info-section">
-          <h3 class="section-handwritten" id="contact">Contacts</h3>
-          <ul class="contacts-list">
-            <li><span class="contact-icon-small">@</span> tu.correo@example.com</li>
-            <li><span class="contact-icon-small">GH</span> <a href="https://github.com/paooCaar" target="_blank">github.com/paooCaar</a></li>
-            <li><span class="contact-icon-small">IN</span> LinkedIn próximamente</li>
-          </ul>
+          <div class="info-card">
+            <h3 class="handwritten">Experience</h3>
+            <ul class="info-list">
+              <li><strong>Dashboard 911 CDMX</strong><br>Análisis de emergencias</li>
+              <li><strong>EcoBici PySpark</strong><br>Movilidad y duración de viajes</li>
+              <li><strong>Servicio Social</strong><br>Actividades educativas</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3 class="handwritten" id="contact">Contacts</h3>
+            <ul class="contacts-list">
+              <li><span class="contact-badge">@</span> tu.correo@example.com</li>
+              <li><span class="contact-badge">GH</span> <a href="https://github.com/paooCaar" target="_blank">github.com/paooCaar</a></li>
+              <li><span class="contact-badge">IN</span> LinkedIn próximamente</li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <!-- RESUME -->
-      <section id="resume" class="resume-section">
-      <div class="resume-header">
-        <span class="resume-pill">You can</span>
-        <h2>Resume</h2>
-      </div>
-
-      <div class="resume-grid">
-
-        <div class="resume-column">
-          <h3>Education</h3>
-          <ul class="resume-list">
-            <li><strong>Ciencia de Datos</strong><br>ITAM — Actual</li>
-            <li><strong>Cursos clave</strong><br>Probabilidad, BD, ML, Álgebra Lineal</li>
-          </ul>
-        </div>
-
-        <div class="resume-column">
-          <h3>Experience</h3>
-          <ul class="resume-list">
-            <li><strong>Dashboard 911 CDMX</strong><br>Análisis de emergencias</li>
-            <li><strong>EcoBici PySpark</strong><br>Movilidad y duración de viajes</li>
-            <li><strong>Servicio Social</strong><br>Actividades educativas</li>
-          </ul>
-        </div>
-
-        <div class="resume-column">
-          <h3>Languages</h3>
-          <ul class="resume-list">
-            <li>Spanish: Native</li>
-            <li>English: Advanced</li>
-          </ul>
-        </div>
-
-        <div class="resume-column">
-          <h3>Skills</h3>
-          <ul class="resume-list">
-            <li>Análisis de datos</li>
-            <li>Python & SQL</li>
-            <li>Visualización</li>
-            <li>Diseño & Storytelling</li>
-          </ul>
-        </div>
-
-        <div class="resume-column">
-          <h3>Software</h3>
-          <ul class="software-list">
-            <li><span>Python</span><span class="bar bar-4"></span></li>
-            <li><span>SQL</span><span class="bar bar-4"></span></li>
-            <li><span>Tableau</span><span class="bar bar-3"></span></li>
-            <li><span>Git/GitHub</span><span class="bar bar-3"></span></li>
-            <li><span>Canva/Figma</span><span class="bar bar-3"></span></li>
-          </ul>
-        </div>
-
-      </div>
-      </section>
-
     </section>
 
     <!-- PROYECTOS -->
     <section id="projects" class="projects-section">
+      <div class="content-wrapper">
+        <h2 class="section-title handwritten">My Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-number">1</div>
+            <h3>911 CDMX</h3>
+            <p>Análisis de llamadas de emergencia y efectos del confinamiento.</p>
+            <a href="#" class="project-link">Ver más →</a>
+          </article>
 
-      <!-- Stickers flotantes -->
-      <img src="sticker-basketball.svg" class="sticker basket-project" alt="Basketball">
-      <img src="sticker-hoop.svg" class="sticker hoop-sticker" style="top: 1050px; left: 150px; width: 100px;" alt="Basketball Hoop">
-      <img src="sticker-dance.svg" class="sticker dance-sticker" style="top: 1100px; right: 100px; width: 85px;" alt="Dance">
-      <img src="sticker-star.svg" class="sticker star-project" alt="Star">
-      <img src="sticker-lightning.svg" class="sticker lightning-project" alt="Lightning">
+          <article class="project-card">
+            <div class="project-number">2</div>
+            <h3>EcoBici PySpark</h3>
+            <p>Movilidad urbana, duración de viajes y disponibilidad.</p>
+            <a href="#" class="project-link">Ver más →</a>
+          </article>
 
-      <div class="projects-header">
-        <h2>My Projects</h2>
-        <p class="projects-subtitle">Una selección morada ✨ de mis proyectos favoritos</p>
-      </div>
+          <article class="project-card">
+            <div class="project-number">3</div>
+            <h3>Endangered Animals</h3>
+            <p>Dashboard educativo sobre especies en riesgo.</p>
+            <a href="#" class="project-link">Ver más →</a>
+          </article>
 
-      <div class="projects-grid">
-
-        <article class="project-card project-1">
-          <div class="project-number">1</div>
-          <h3>911 CDMX</h3>
-          <p>Análisis de llamadas de emergencia y efectos del confinamiento.</p>
-          <a href="#" class="project-link">Ver más →</a>
-        </article>
-
-        <article class="project-card project-2">
-          <div class="project-number">2</div>
-          <h3>EcoBici PySpark</h3>
-          <p>Movilidad urbana, duración de viajes y disponibilidad.</p>
-          <a href="#" class="project-link">Ver más →</a>
-        </article>
-
-        <article class="project-card project-3">
-          <div class="project-number">3</div>
-          <h3>Endangered Animals</h3>
-          <p>Dashboard educativo sobre especies en riesgo.</p>
-          <a href="#" class="project-link">Ver más →</a>
-        </article>
-
-        <article class="project-card project-4">
-          <div class="project-number">4</div>
-          <h3>Cableado CDMX</h3>
-          <p>Propuesta de política pública para un cableado ordenado.</p>
-          <a href="#" class="project-link">Ver más →</a>
-        </article>
-
+          <article class="project-card">
+            <div class="project-number">4</div>
+            <h3>Cableado CDMX</h3>
+            <p>Propuesta de política pública para un cableado ordenado.</p>
+            <a href="#" class="project-link">Ver más →</a>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -213,6 +133,12 @@
   <footer class="site-footer">
     <p>Hecho con 💜 por Pao · GitHub Pages</p>
   </footer>
+
+  <!-- Stickers flotantes -->
+  <img src="sticker-basketball.svg" class="sticker sticker-1" alt="Basketball">
+  <img src="sticker-hoop.svg" class="sticker sticker-2" alt="Basketball Hoop">
+  <img src="sticker-dance.svg" class="sticker sticker-3" alt="Dance">
+  <img src="sticker-star.svg" class="sticker sticker-4" alt="Star">
 
 </body>
 </html>
