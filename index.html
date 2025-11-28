@@ -15,78 +15,105 @@
 <body>
 
   <header class="top-bar">
-    <div class="top-logo">Pao</div>
+    <div class="top-logo">Pao · Portfolio 2025</div>
     <nav class="top-nav">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#hero">Inicio</a>
+      <a href="#resume">Resume</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#contact">Contacto</a>
     </nav>
   </header>
 
   <main>
-    <!-- HERO CENTRAL CON FOTO -->
-    <section class="hero-section">
-      <div class="hero-container">
-        <!-- Foto central grande -->
-        <div class="hero-image-wrapper">
-          <div class="hero-image-frame">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=1000&fit=crop" alt="Pao" class="hero-image" onerror="this.src='https://via.placeholder.com/400x500/DC2626/FCD34D?text=Pao'">
-            <div class="image-badge">MÉXICO</div>
-            <div class="image-number">9</div>
+    <!-- SECCIÓN MORADA CON TÍTULO -->
+    <section class="purple-hero">
+      <!-- Ilustraciones espaciales -->
+      <div class="space-illustrations">
+        <div class="globe-illustration">🌍</div>
+        <div class="stars-small">✨ ✨</div>
+        <div class="star-large">⭐</div>
+        <div class="spaceship">🚀</div>
+        <div class="line-decoration line-1"></div>
+        <div class="line-decoration line-2"></div>
+      </div>
+      
+      <h1 class="portfolio-title">Portfolio</h1>
+    </section>
+
+    <!-- SECCIÓN BLANCA CON ABOUT ME -->
+    <section id="about" class="white-section">
+      <div class="about-container">
+        <!-- Foto a la izquierda -->
+        <div class="photo-container">
+          <div class="photo-frame">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop" alt="Pao" class="profile-photo">
           </div>
         </div>
 
-        <!-- Texto alrededor -->
-        <div class="hero-content">
-          <h1 class="hero-title">Portfolio</h1>
-          <p class="hero-subtitle">Data Science · Design · Basketball · Dance</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN BLANCA CON INFORMACIÓN -->
-    <section id="about" class="white-section">
-      <div class="content-wrapper">
-        <h2 class="section-title handwritten">About me</h2>
-        <div class="about-content">
-          <p class="about-text">
-            Hey, soy <strong>Pao</strong>, estudiante de <strong>Ciencia de Datos</strong> con gusto por el diseño, las historias visuales y los proyectos creativos. Me interesa crear proyectos donde mezclo código, diseño y análisis para comunicar ideas de forma clara, estética e impactante.
-          </p>
-          <p class="about-text">
-            Más allá de la pantalla, soy alguien que escucha profundamente y colabora fácilmente. Y sí, trabajo bien bajo presión y siempre trato de cumplir con los plazos. Y lo más importante, creo que un gran diseño no es solo lo que ves, es cómo hace sentir a las personas y qué tan bien resuelve un problema.
+        <!-- Texto a la derecha -->
+        <div class="about-text-container">
+          <h2 class="about-title handwritten">About me</h2>
+          <p class="about-description">
+            Hey, soy <strong>Pao</strong>, estudiante de <strong>Ciencia de Datos</strong> con gusto por el diseño, las historias visuales y los proyectos creativos. Me interesa crear proyectos donde mezclo código, diseño y análisis para comunicar ideas de forma clara, estética e impactante. Más allá de la pantalla, soy alguien que escucha profundamente y colabora fácilmente. Y sí, trabajo bien bajo presión y siempre trato de cumplir con los plazos. Y lo más importante, creo que un gran diseño no es solo lo que ves, es cómo hace sentir a las personas y qué tan bien resuelve un problema.
           </p>
           <div class="passions-badge">
             🏀 Amante del básquet · 💃 Apasionada del baile
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Secciones en fila -->
-        <div class="info-grid">
-          <div class="info-card">
-            <h3 class="handwritten">Software</h3>
-            <div class="software-grid">
-              <div class="software-box" style="background: #4A90E2;">Py</div>
-              <div class="software-box" style="background: #FF6B35;">SQL</div>
-              <div class="software-box" style="background: #9B59B6;">Tab</div>
-            </div>
+    <!-- RESUME -->
+    <section id="resume" class="resume-section">
+      <div class="content-wrapper">
+        <div class="resume-header">
+          <span class="resume-pill">You can</span>
+          <h2 class="handwritten">Resume</h2>
+        </div>
+
+        <div class="resume-grid">
+          <div class="resume-column">
+            <h3 class="handwritten">Education</h3>
+            <ul class="resume-list">
+              <li><strong>Ciencia de Datos</strong><br>ITAM — Actual</li>
+              <li><strong>Cursos clave</strong><br>Probabilidad, BD, ML, Álgebra Lineal</li>
+            </ul>
           </div>
 
-          <div class="info-card">
+          <div class="resume-column">
             <h3 class="handwritten">Experience</h3>
-            <ul class="info-list">
+            <ul class="resume-list">
               <li><strong>Dashboard 911 CDMX</strong><br>Análisis de emergencias</li>
               <li><strong>EcoBici PySpark</strong><br>Movilidad y duración de viajes</li>
               <li><strong>Servicio Social</strong><br>Actividades educativas</li>
             </ul>
           </div>
 
-          <div class="info-card">
-            <h3 class="handwritten" id="contact">Contacts</h3>
-            <ul class="contacts-list">
-              <li><span class="contact-badge">@</span> tu.correo@example.com</li>
-              <li><span class="contact-badge">GH</span> <a href="https://github.com/paooCaar" target="_blank">github.com/paooCaar</a></li>
-              <li><span class="contact-badge">IN</span> LinkedIn próximamente</li>
+          <div class="resume-column">
+            <h3 class="handwritten">Languages</h3>
+            <ul class="resume-list">
+              <li>Spanish: Native</li>
+              <li>English: Advanced</li>
             </ul>
+          </div>
+
+          <div class="resume-column">
+            <h3 class="handwritten">Skills</h3>
+            <ul class="resume-list">
+              <li>Análisis de datos</li>
+              <li>Python & SQL</li>
+              <li>Visualización</li>
+              <li>Diseño & Storytelling</li>
+            </ul>
+          </div>
+
+          <div class="resume-column">
+            <h3 class="handwritten">Software</h3>
+            <div class="software-icons">
+              <div class="software-icon" style="background: #4A90E2;">Py</div>
+              <div class="software-icon" style="background: #FF6B35;">SQL</div>
+              <div class="software-icon" style="background: #9B59B6;">Tab</div>
+            </div>
           </div>
         </div>
       </div>
@@ -128,6 +155,18 @@
       </div>
     </section>
 
+    <!-- CONTACTO -->
+    <section id="contact" class="contact-section">
+      <div class="content-wrapper">
+        <h2 class="section-title handwritten">Contacts</h2>
+        <ul class="contacts-list">
+          <li><span class="contact-badge">@</span> tu.correo@example.com</li>
+          <li><span class="contact-badge">GH</span> <a href="https://github.com/paooCaar" target="_blank">github.com/paooCaar</a></li>
+          <li><span class="contact-badge">IN</span> LinkedIn próximamente</li>
+        </ul>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -136,9 +175,8 @@
 
   <!-- Stickers flotantes -->
   <img src="sticker-basketball.svg" class="sticker sticker-1" alt="Basketball">
-  <img src="sticker-hoop.svg" class="sticker sticker-2" alt="Basketball Hoop">
-  <img src="sticker-dance.svg" class="sticker sticker-3" alt="Dance">
-  <img src="sticker-star.svg" class="sticker sticker-4" alt="Star">
+  <img src="sticker-star.svg" class="sticker sticker-2" alt="Star">
+  <img src="sticker-lightning.svg" class="sticker sticker-3" alt="Lightning">
 
 </body>
 </html>
