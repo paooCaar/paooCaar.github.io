@@ -8,6 +8,9 @@
   --text-dark: #4A3A6E;
   --text-soft: #6B5B8E;
   --accent-pink: #E8A8D8;
+  --rose-pink: #F4A5C7;
+  --rose-light: #FFC0D9;
+  --rose-pastel: #FFE5F1;
 }
 
 /* Reset */
@@ -35,7 +38,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(139, 126, 200, 0.95);
+  background: linear-gradient(135deg, rgba(139, 126, 200, 0.95), rgba(244, 165, 199, 0.95));
   backdrop-filter: blur(10px);
   padding: 1rem 2rem;
   display: flex;
@@ -73,12 +76,12 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--purple-pastel);
+  background: linear-gradient(90deg, var(--rose-pink), var(--purple-pastel));
   transition: width 0.3s ease;
 }
 
 .top-nav a:hover {
-  color: var(--purple-pastel);
+  color: var(--rose-light);
 }
 
 .top-nav a:hover::after {
@@ -86,11 +89,12 @@ body {
 }
 
 .top-nav a.active {
-  color: var(--purple-pastel);
+  color: var(--rose-light);
 }
 
 .top-nav a.active::after {
   width: 100%;
+  background: linear-gradient(90deg, var(--rose-pink), var(--purple-pastel));
 }
 
 /* SECCIÓN MORADA CON TÍTULO */
@@ -265,13 +269,13 @@ body {
 
 .passions-badge {
   display: inline-block;
-  background: linear-gradient(135deg, var(--accent-pink), var(--purple-medium));
+  background: linear-gradient(135deg, var(--rose-pink), var(--accent-pink), var(--purple-medium));
   color: var(--white);
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
   font-size: 1rem;
-  box-shadow: 0 4px 15px rgba(184, 169, 232, 0.4);
+  box-shadow: 0 4px 15px rgba(244, 165, 199, 0.4);
 }
 
 .handwritten {
@@ -387,7 +391,7 @@ body {
 }
 
 .project-card {
-  background: linear-gradient(135deg, var(--purple-medium), var(--purple-dark));
+  background: linear-gradient(135deg, var(--rose-pink), var(--purple-medium), var(--purple-dark));
   color: var(--white);
   padding: 2rem;
   border-radius: 16px;
@@ -397,13 +401,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 10px 30px rgba(139, 126, 200, 0.3);
+  box-shadow: 0 10px 30px rgba(244, 165, 199, 0.3);
   transition: transform 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(139, 126, 200, 0.4);
+  box-shadow: 0 20px 40px rgba(244, 165, 199, 0.5);
 }
 
 .project-number {
@@ -466,7 +470,7 @@ body {
 }
 
 .contact-badge {
-  background: var(--purple-medium);
+  background: linear-gradient(135deg, var(--rose-pink), var(--purple-medium));
   color: var(--white);
   width: 35px;
   height: 35px;
@@ -477,7 +481,7 @@ body {
   font-size: 0.9rem;
   font-weight: 700;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(139, 126, 200, 0.3);
+  box-shadow: 0 2px 8px rgba(244, 165, 199, 0.3);
 }
 
 .contacts-list a {
@@ -559,7 +563,7 @@ body {
   right: 30px;
   width: 50px;
   height: 50px;
-  background: var(--purple-medium);
+  background: linear-gradient(135deg, var(--rose-pink), var(--purple-medium));
   color: var(--white);
   border: none;
   border-radius: 50%;
@@ -569,7 +573,7 @@ body {
   visibility: hidden;
   transition: all 0.3s ease;
   z-index: 1000;
-  box-shadow: 0 4px 15px rgba(139, 126, 200, 0.4);
+  box-shadow: 0 4px 15px rgba(244, 165, 199, 0.4);
 }
 
 .scroll-top-btn.show {
@@ -578,9 +582,9 @@ body {
 }
 
 .scroll-top-btn:hover {
-  background: var(--purple-dark);
+  background: linear-gradient(135deg, var(--rose-light), var(--purple-dark));
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(139, 126, 200, 0.6);
+  box-shadow: 0 6px 20px rgba(244, 165, 199, 0.6);
 }
 
 /* Animaciones al hacer scroll */
