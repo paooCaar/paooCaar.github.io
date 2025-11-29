@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Botón volver arriba -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba">↑</button>
 
   <header class="top-bar">
     <div class="top-logo">Pao · Portfolio 2025</div>
@@ -25,13 +27,7 @@
   </header>
 
   <main>
-    <!-- SECCIÓN MORADA CON TÍTULO -->
-    <section class="purple-hero">
-      <div class="hero-image-container">
-        <img src="Imagen.png" alt="Pao" class="hero-main-image">
-      </div>
-      <h1 class="portfolio-title">Hacerca de mi</h1>
-    </section>
+    
 
     <!-- SECCIÓN BLANCA CON ABOUT ME -->
     <section id="about" class="white-section">
@@ -39,7 +35,7 @@
         <!-- Foto a la izquierda -->
         <div class="photo-container">
           <div class="photo-frame">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop" alt="Pao" class="profile-photo">
+            <img src="Imagen.png" alt="Pao" class="profile-photo">
           </div>
         </div>
 
@@ -47,7 +43,9 @@
         <div class="about-text-container">
           <h2 class="about-title handwritten">About me</h2>
           <p class="about-description">
-            Hey, soy <strong>Pao</strong>, estudiante de <strong>Ciencia de Datos y Actuaria</strong> con gusto por las matematicas y los proyectos creativos. Me interesa crear proyectos donde mezclo código, diseño y conciencia social para comunicar ideas de forma clara, estética e impactante. Más allá de la pantalla, soy alguien que escucha profundamente y colabora fácilmente. Y sí, trabajo bien bajo presión y siempre trato de cumplir con los plazos. Y lo más importante, creo que un gran diseño no es solo lo que ves, es cómo hace sentir a las personas y qué tan bien resuelve un problema.
+            Hola, soy <strong>Pao</strong>, estudiante de <strong>Ciencia de Datos y Actuaria</strong> Me gustan las matemáticas y los retos que exigen pensar más allá de lo evidente. Creo firmemente que los datos no son solo números detrás de cada uno hay una persona, una historia y una realidad que merece ser escuchada.
+
+            Me considero perseverante, curiosa y orientada a transformar información en impacto. Me gusta construir soluciones que unan técnica, empatía y claridad, siempre buscando aprender más y entender mejor el mundo a través de los datos.
           </p>
           <div class="passions-badge">
             🏀 Amante del básquet
@@ -68,17 +66,18 @@
           <div class="resume-column">
             <h3 class="handwritten">Education</h3>
             <ul class="resume-list">
-              <li><strong>Ciencia de Datos</strong><br>ITAM — Actual</li>
-              <li><strong>Cursos clave</strong><br>Probabilidad, BD, ML, Álgebra Lineal</li>
+              <li><strong>Ciencia de Datos y Actuaria</strong><br>ITAM — Actual</li>
+              <li><strong>Cursos clave</strong><br>Probabilidad, BD, Álgebra Lineal 2</li>
             </ul>
           </div>
 
           <div class="resume-column">
             <h3 class="handwritten">Experience</h3>
             <ul class="resume-list">
+              <li><strong>Directora Ejecutiva</strong><br>Enlace Rural — Organización Civil</li>
+              <li><strong>Tesorera</strong><br>Representación B1T</li>
               <li><strong>Dashboard 911 CDMX</strong><br>Análisis de emergencias</li>
               <li><strong>EcoBici PySpark</strong><br>Movilidad y duración de viajes</li>
-              <li><strong>Servicio Social</strong><br>Actividades educativas</li>
             </ul>
           </div>
 
@@ -94,7 +93,9 @@
             <h3 class="handwritten">Skills</h3>
             <ul class="resume-list">
               <li>Análisis de datos</li>
-              <li>Python & SQL</li>
+              <li>Python & Pandas</li>
+              <li>Docker</li>
+              <li>GitHub</li>
               <li>Visualización</li>
               <li>Diseño & Storytelling</li>
             </ul>
@@ -104,8 +105,9 @@
             <h3 class="handwritten">Software</h3>
             <div class="software-icons">
               <div class="software-icon" style="background: #4A90E2;">Py</div>
-              <div class="software-icon" style="background: #FF6B35;">SQL</div>
-              <div class="software-icon" style="background: #9B59B6;">Tab</div>
+              <div class="software-icon" style="background: #FF6B35;">Pandas</div>
+              <div class="software-icon" style="background: #0db7ed;">Docker</div>
+              <div class="software-icon" style="background: #9B59B6;">GitHub</div>
             </div>
           </div>
         </div>
@@ -166,25 +168,81 @@
     <p>Hecho con 💜 por Pao · GitHub Pages</p>
   </footer>
 
-  <!-- Stickers flotantes -->
-  <img src="sticker-flower1.svg" class="sticker sticker-1" alt="Flower">
-  <img src="sticker-daisy.svg" class="sticker sticker-2" alt="Daisy">
-  <img src="sticker-dinosaur.svg" class="sticker sticker-3" alt="Dinosaur">
-  <img src="sticker-loading.svg" class="sticker sticker-4" alt="Loading">
-  <img src="sticker-moon.svg" class="sticker sticker-5" alt="Moon">
-  <img src="sticker-tulips.svg" class="sticker sticker-6" alt="Tulips">
-  <img src="sticker-dice.svg" class="sticker sticker-7" alt="Dice">
-  <img src="sticker-cassette.svg" class="sticker sticker-8" alt="Cassette">
-  <img src="sticker-disco.svg" class="sticker sticker-9" alt="Disco Ball">
-  <img src="sticker-planet.svg" class="sticker sticker-10" alt="Planet">
-  <img src="sticker-flower2.svg" class="sticker sticker-11" alt="Flower">
-  <img src="sticker-balloon.svg" class="sticker sticker-12" alt="Balloon">
-  <img src="sticker-bouquet.svg" class="sticker sticker-13" alt="Bouquet">
-  <img src="sticker-heart.svg" class="sticker sticker-14" alt="Heart">
-  <img src="sticker-headphones.svg" class="sticker sticker-15" alt="Headphones">
-  <img src="sticker-vinyl.svg" class="sticker sticker-16" alt="Vinyl">
-  <img src="sticker-heart2.svg" class="sticker sticker-17" alt="Heart">
-  <img src="sticker-camera.svg" class="sticker sticker-18" alt="Camera">
+  <script>
+    // Scroll suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Botón volver arriba
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollTopBtn.classList.add('show');
+      } else {
+        scrollTopBtn.classList.remove('show');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Animaciones al hacer scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observar elementos para animación
+    document.querySelectorAll('.resume-column, .project-card, .info-card').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
+
+    // Navegación activa
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.top-nav a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>

@@ -17,6 +17,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Outfit", sans-serif;
   background: var(--white);
@@ -78,6 +82,14 @@ body {
 }
 
 .top-nav a:hover::after {
+  width: 100%;
+}
+
+.top-nav a.active {
+  color: var(--purple-pastel);
+}
+
+.top-nav a.active::after {
   width: 100%;
 }
 
@@ -305,6 +317,14 @@ body {
   gap: 2rem;
 }
 
+.resume-column {
+  transition: transform 0.3s ease;
+}
+
+.resume-column:hover {
+  transform: translateY(-5px);
+}
+
 .resume-column h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -382,7 +402,8 @@ body {
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(139, 126, 200, 0.4);
 }
 
 .project-number {
@@ -529,6 +550,49 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Botón volver arriba */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--purple-medium);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(139, 126, 200, 0.4);
+}
+
+.scroll-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top-btn:hover {
+  background: var(--purple-dark);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(139, 126, 200, 0.6);
+}
+
+/* Animaciones al hacer scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* FOOTER */
