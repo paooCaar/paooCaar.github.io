@@ -1,0 +1,6 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="5" y="15" width="110" height="10" rx="5" fill="#D4C5F4" stroke="white" stroke-width="2"/>
+  <rect x="5" y="15" width="55" height="10" rx="5" fill="#8B7EC8" stroke="white" stroke-width="2"/>
+  <text x="10" y="12" font-family="monospace" font-size="8" fill="#4A3A6E" font-weight="bold">LOADING...</text>
+</svg>
+
