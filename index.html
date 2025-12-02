@@ -196,6 +196,22 @@
   </footer>
 
   <script>
+    // Mini juego de basquet
+    const ball = document.getElementById('ball');
+    const scoreSpan = document.getElementById('score');
+    let score = 0;
+
+    ball.addEventListener('click', () => {
+      ball.classList.add('shoot');
+
+      setTimeout(() => {
+        score++;
+        scoreSpan.textContent = score;
+        ball.classList.remove('shoot');
+      }, 600);
+    });
+
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -247,3 +263,4 @@
 
 </body>
 </html>
+

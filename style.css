@@ -356,3 +356,54 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* ---------------- MINI JUEGO BASQUET ---------------- */
+
+.game-section {
+  background: var(--purple-very-light);
+  padding: 4rem 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(139, 126, 200, 0.2);
+}
+
+.game-instructions {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-soft);
+}
+
+.basketball-court {
+  position: relative;
+  width: 260px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.basket {
+  width: 120px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ball {
+  width: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: transform 0.6s ease;
+}
+
+.ball.shoot {
+  transform: translate(-50%, -220px);
+}
+
+.score-text {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--purple-dark);
+  font-weight: 600;
+}
