@@ -17,7 +17,7 @@
   <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba">↑</button>
 
   <header class="top-bar">
-    <div class="top-logo"> 💜 Paola Carmona</div>
+    <div class="top-logo">💜 Paola Carmona</div>
     <nav class="top-nav">
       <a href="#about">Inicio</a>
       <a href="#resume">Resumen</a>
@@ -44,11 +44,12 @@
 
           <p class="about-description">
             Soy Pao, una chica hiperactiva que funciona mejor cuando tiene varios proyectos al mismo tiempo. Me gustan las matemáticas, el básquet y la programación.
-            Estudio <strong>Ciencia de Datos y Actuaría </strong> en el ITAM, porque me gustan los retos que te exigen pensar rápido y con precisión.
+            Estudio <strong>Ciencia de Datos y Actuaría</strong> en el ITAM, porque me gustan los retos que te exigen pensar rápido y con precisión.
           </p>
 
           <p class="about-description">
-            Soy <strong>perseverante, curiosa y amigable</strong>, siempre tengo algo entre manos: un análisis pendiente, un ejercicio de probabilidad o un balón cerca.
+            Soy <strong>perseverante, curiosa y amigable</strong>; casi siempre tengo algo entre manos: un análisis pendiente, un ejercicio de probabilidad o un balón cerca.
+          </p>
 
           <div class="passions-badge">
             En fin, soy una chica deportista que terminó encontrando en el código y los números otra forma de jugar.
@@ -67,10 +68,10 @@
         <div class="resume-grid">
 
           <div class="resume-column">
-            <h3 class="handwritten">Education</h3>
+            <h3 class="handwritten">Educación</h3>
             <ul class="resume-list">
               <li><strong>Ciencia de Datos y Actuaría</strong><br>ITAM — Actual</li>
-              <li><strong>Clases clave</strong><br>Calculo de Probabilidades, Base de Datos, Álgebra Lineal 2, Estructura de Datos</li>
+              <li><strong>Clases clave</strong><br>Cálculo de Probabilidades, Bases de Datos, Álgebra Lineal II, Estructuras de Datos</li>
             </ul>
           </div>
 
@@ -83,38 +84,41 @@
           </div>
 
           <div class="resume-column">
-            <h3 class="handwritten">Software</h3>
+            <h3 class="handwritten">Software & tech</h3>
             <div class="software-icons">
-              <div class="software-icon" style="background: #4A90E2;">Py</div>
-              <div class="software-icon" style="background: #FF6B35;"> Pandas </div>
-              <div class="software-icon" style="background: #f5ff35;"> SQL </div>
-              <div class="software-icon" style="background: #ff35a7;"> MongoDB </div>
-              <div class="software-icon" style="background: #0db7ed;">Docker</div>
-              <div class="software-icon" style="background: #9B59B6;">GitHub</div>
-              <div class="software-icon" style="background: #5dff35;"> Excel </div>
-              <div class="software-icon" style="background: #8635ff;"> Java </div>
+              <div class="software-icon">Python</div>
+              <div class="software-icon">Pandas</div>
+              <div class="software-icon">SQL</div>
+              <div class="software-icon">MongoDB</div>
+              <div class="software-icon">Docker</div>
+              <div class="software-icon">GitHub</div>
+              <div class="software-icon">Excel</div>
+              <div class="software-icon">Java</div>
             </div>
           </div>
 
         </div>
       </div>
     </section>
-    <!-- MINI JUEGO DE BASQUET -->
 
+    <!-- MINI JUEGO DE BASQUET -->
     <section id="game" class="game-section">
       <div class="content-wrapper">
         <h2 class="section-title handwritten">Mini-juego 🏀</h2>
         <p class="game-instructions">Haz clic en el balón para intentar meter la canasta.</p>
 
         <div class="basketball-court">
-          <img src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png" class="basket" alt="Canasta">
-          <img src="https://cdn-icons-png.flaticon.com/512/1047/1047717.png" class="ball" id="ball" alt="Balón">
+          <div class="basket">
+            <div class="backboard"></div>
+            <div class="rim"></div>
+            <div class="net"></div>
+          </div>
+          <div class="ball" id="ball"></div>
         </div>
 
         <p class="score-text">Puntaje: <span id="score">0</span></p>
       </div>
     </section>
-
 
     <!-- PROYECTOS -->
     <section id="projects" class="projects-section">
@@ -126,9 +130,11 @@
           <!-- Proyecto 1 -->
           <article class="project-card">
             <div class="project-number">1</div>
+            <span class="project-pill">Data · CDMX</span>
             <h3>Análisis de llamadas 911 CDMX</h3>
             <p>
-              Exploración de patrones de llamadas de emergencia usando SQL, dashboards y visualización, con enfoque en impacto social y diferencias entre colonias.
+              Exploración de patrones de llamadas de emergencia usando SQL, dashboards y visualización,
+              con enfoque en impacto social y diferencias entre colonias.
             </p>
             <div class="project-tags">
               <span class="project-tag">SQL</span>
@@ -141,6 +147,7 @@
           <!-- Proyecto 2 -->
           <article class="project-card">
             <div class="project-number">2</div>
+            <span class="project-pill">ML · Social</span>
             <h3>Abogadas de las Mujeres</h3>
             <p>
               Modelos predictivos y análisis social para entender patrones de violencia de género,
@@ -157,13 +164,15 @@
           <!-- Proyecto 3 -->
           <article class="project-card">
             <div class="project-number">3</div>
+            <span class="project-pill">CS · Estructuras</span>
             <h3>ArbolAVL Public</h3>
             <p>
-              Clase en Python que implementa un árbol AVL genérico, con búsquedas, inserciones y eliminaciones balanceadas.
+              Clase en Python que implementa un árbol AVL genérico,
+              con búsquedas, inserciones y eliminaciones balanceadas.
             </p>
             <div class="project-tags">
               <span class="project-tag">Python</span>
-              <span class="project-tag">Estructuras de Datos</span>
+              <span class="project-tag">Estructuras de datos</span>
               <span class="project-tag">Árboles AVL</span>
             </div>
             <a href="https://github.com/paooCaar/ArbolAVL-Public" target="_blank" class="project-link">Ver en GitHub →</a>
@@ -201,17 +210,19 @@
     const scoreSpan = document.getElementById('score');
     let score = 0;
 
-    ball.addEventListener('click', () => {
-      ball.classList.add('shoot');
+    if (ball) {
+      ball.addEventListener('click', () => {
+        ball.classList.add('shoot');
 
-      setTimeout(() => {
-        score++;
-        scoreSpan.textContent = score;
-        ball.classList.remove('shoot');
-      }, 600);
-    });
+        setTimeout(() => {
+          score++;
+          scoreSpan.textContent = score;
+          ball.classList.remove('shoot');
+        }, 600);
+      });
+    }
 
-
+    // Scroll suave
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -222,6 +233,7 @@
       });
     });
 
+    // Botón volver arriba
     const scrollTopBtn = document.getElementById('scrollTopBtn');
     window.addEventListener('scroll', () => {
       if (window.pageYOffset > 300) scrollTopBtn.classList.add('show');
@@ -232,6 +244,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+    // Animaciones al hacer scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('fade-in-visible');
@@ -243,6 +256,7 @@
       observer.observe(el);
     });
 
+    // Navegación activa
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.top-nav a');
 
@@ -263,4 +277,3 @@
 
 </body>
 </html>
-
