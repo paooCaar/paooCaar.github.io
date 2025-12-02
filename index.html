@@ -22,6 +22,7 @@
       <a href="#about">Inicio</a>
       <a href="#resume">Resumen</a>
       <a href="#projects">Proyectos</a>
+      <a href="#gallery">Galería</a>
       <a href="#contact">Contacto</a>
     </nav>
   </header>
@@ -105,7 +106,7 @@
     <section id="game" class="game-section">
       <div class="content-wrapper">
         <h2 class="section-title handwritten">Mini-juego 🏀</h2>
-        <p class="game-instructions">Haz clic en el balón para intentar meter la canasta.</p>
+        <p class="game-instructions">Da clic en el balón para lanzar. A veces entra por la izquierda, a veces por el centro, a veces por la derecha.</p>
 
         <div class="basketball-court">
           <div class="basket">
@@ -116,7 +117,10 @@
           <div class="ball" id="ball"></div>
         </div>
 
-        <p class="score-text">Puntaje: <span id="score">0</span></p>
+        <div class="score-wrapper">
+          <p class="score-text">Puntaje: <span id="score">0</span></p>
+          <p class="combo-text" id="comboText">Haz tu primer tiro para empezar ✨</p>
+        </div>
       </div>
     </section>
 
@@ -182,19 +186,76 @@
       </div>
     </section>
 
+    <!-- GALERÍA -->
+    <section id="gallery" class="gallery-section">
+      <div class="content-wrapper">
+        <h2 class="section-title handwritten">Momentos fuera del código</h2>
+        <p class="gallery-subtitle">
+          Baile, gimnasia y otras etapas que también han formado parte de quién soy.
+        </p>
+
+        <div class="gallery-shell">
+          <button class="gallery-arrow left" aria-label="Foto anterior">‹</button>
+
+          <div class="gallery-track" id="galleryTrack">
+            <!-- Cambia los src por los nombres reales de tus fotos -->
+            <figure class="gallery-card">
+              <img src="baile1.jpg" alt="Presentación de baile">
+              <figcaption>Presentación de baile</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+              <img src="gimnasia1.jpg" alt="Rutina de gimnasia">
+              <figcaption>Rutina de gimnasia</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+              <img src="baile2.jpg" alt="Coreografía en grupo">
+              <figcaption>Coreografía en grupo</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+              <img src="vida1.jpg" alt="Un momento especial fuera de clases">
+              <figcaption>Un momento especial fuera de clases</figcaption>
+            </figure>
+          </div>
+
+          <button class="gallery-arrow right" aria-label="Foto siguiente">›</button>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACTO -->
     <section id="contact" class="contact-section">
       <div class="content-wrapper">
-        <h2 class="section-title handwritten">Contacto</h2>
-        <ul class="contacts-list">
-          <li><span class="contact-badge">@</span> paolacarm31@gmail.com</li>
-          <li><span class="contact-badge">GH</span> 
-            <a href="https://github.com/paooCaar" target="_blank">
-              github.com/paooCaar
-            </a>
-          </li>
-          <li><span class="contact-badge">IN</span> LinkedIn próximamente</li>
-        </ul>
+        <div class="contact-layout">
+          <div class="contact-main">
+            <h2 class="section-title handwritten">Contacto</h2>
+            <p class="contact-caption">
+              Aquí puedes poner un mensaje sobre en qué proyectos te interesa colaborar, cómo prefieres que te contacten,
+              o cualquier cosa linda para quien haya llegado hasta el final de la página. 💌
+            </p>
+
+            <ul class="contacts-list">
+              <li><span class="contact-badge">@</span> paolacarm31@gmail.com</li>
+              <li><span class="contact-badge">GH</span> 
+                <a href="https://github.com/paooCaar" target="_blank">
+                  github.com/paooCaar
+                </a>
+              </li>
+              <li><span class="contact-badge">IN</span> LinkedIn próximamente</li>
+            </ul>
+          </div>
+
+          <aside class="contact-notes">
+            <h3 class="contact-notes-title">Nota editable ✨</h3>
+            <p class="contact-notes-text">
+              Aquí puedes escribir algo más personal: por ejemplo, que te encanta mezclar datos con deporte, 
+              que siempre estás abierta a aprender cosas nuevas o que respondes más rápido por cierto canal. 
+              Cámbialo cuando quieras, es solo un texto genérico por ahora.
+            </p>
+          </aside>
+        </div>
       </div>
     </section>
 
@@ -205,21 +266,72 @@
   </footer>
 
   <script>
-    // Mini juego de basquet
+    // Mini juego de basquet (versión más pro)
     const ball = document.getElementById('ball');
     const scoreSpan = document.getElementById('score');
+    const comboText = document.getElementById('comboText');
     let score = 0;
+    const shotClasses = ['shoot-left', 'shoot-center', 'shoot-right'];
+    const comboMessages = [
+      '¡Nada más bonito que una buena canasta! 🏀',
+      'Buen tiro, sigue sumando puntos ✨',
+      'Ese rebote también cuenta, ¿eh? 😌',
+      'La defensa ni la vio venir 😎',
+      'Ritmo, técnica y precisión. Nice shot 💜'
+    ];
 
-    if (ball) {
+    if (ball && scoreSpan && comboText) {
       ball.addEventListener('click', () => {
-        ball.classList.add('shoot');
+        if (ball.classList.contains('shooting')) return; // evita spameo
+
+        ball.classList.add('shooting');
+        // quitar clases previas
+        ball.classList.remove('shoot-left', 'shoot-center', 'shoot-right');
+
+        // forzar reflow para reiniciar animación
+        void ball.offsetWidth;
+
+        const randomClass = shotClasses[Math.floor(Math.random() * shotClasses.length)];
+        ball.classList.add(randomClass);
 
         setTimeout(() => {
           score++;
           scoreSpan.textContent = score;
-          ball.classList.remove('shoot');
-        }, 600);
+
+          const msg = comboMessages[Math.floor(Math.random() * comboMessages.length)];
+          comboText.textContent = msg;
+          comboText.classList.add('show');
+
+          setTimeout(() => {
+            comboText.classList.remove('show');
+          }, 800);
+
+          ball.classList.remove('shoot-left', 'shoot-center', 'shoot-right', 'shooting');
+        }, 700);
       });
+    }
+
+    // Carrusel galería
+    const galleryTrack = document.getElementById('galleryTrack');
+    const galleryCards = document.querySelectorAll('.gallery-card');
+    const prevBtn = document.querySelector('.gallery-arrow.left');
+    const nextBtn = document.querySelector('.gallery-arrow.right');
+    let galleryIndex = 0;
+
+    function scrollToCard(index) {
+      if (!galleryTrack || galleryCards.length === 0) return;
+      const safeIndex = (index + galleryCards.length) % galleryCards.length;
+      const card = galleryCards[safeIndex];
+      galleryTrack.scrollTo({
+        left: card.offsetLeft - galleryTrack.offsetLeft,
+        behavior: 'smooth'
+      });
+      galleryIndex = safeIndex;
+    }
+
+    if (prevBtn && nextBtn && galleryCards.length > 0) {
+      prevBtn.addEventListener('click', () => scrollToCard(galleryIndex - 1));
+      nextBtn.addEventListener('click', () => scrollToCard(galleryIndex + 1));
     }
 
     // Scroll suave
@@ -251,7 +363,7 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.resume-column, .project-card, .info-card').forEach(el => {
+    document.querySelectorAll('.resume-column, .project-card, .info-card, .gallery-card, .contact-notes').forEach(el => {
       el.classList.add('fade-in');
       observer.observe(el);
     });
