@@ -191,36 +191,82 @@
       <div class="content-wrapper">
         <h2 class="section-title handwritten">Momentos fuera del código</h2>
         <p class="gallery-subtitle">
-          Baile, gimnasia y otras etapas que también han formado parte de quién soy.
+          Baile, gimnasia, básquet y muchos animalitos que han acompañado distintas etapas de mi vida.
         </p>
 
-        <div class="gallery-shell">
-          <button class="gallery-arrow left" aria-label="Foto anterior">‹</button>
+        <div class="gallery-groups">
 
-          <div class="gallery-track" id="galleryTrack">
-            <!-- Cambia los src por los nombres reales de tus fotos -->
-            <figure class="gallery-card">
-              <img src="baile1.jpg" alt="Presentación de baile">
-              <figcaption>Presentación de baile</figcaption>
-            </figure>
-
-            <figure class="gallery-card">
-              <img src="gimnasia1.jpg" alt="Rutina de gimnasia">
-              <figcaption>Rutina de gimnasia</figcaption>
-            </figure>
-
-            <figure class="gallery-card">
-              <img src="baile2.jpg" alt="Coreografía en grupo">
-              <figcaption>Coreografía en grupo</figcaption>
-            </figure>
-
-            <figure class="gallery-card">
-              <img src="vida1.jpg" alt="Un momento especial fuera de clases">
-              <figcaption>Un momento especial fuera de clases</figcaption>
-            </figure>
+          <!-- Grupo 1: Baile & gimnasia -->
+          <h3 class="gallery-group-title">Baile & gimnasia</h3>
+          <div class="gallery-shell">
+            <button class="gallery-arrow left" aria-label="Foto anterior">‹</button>
+            <div class="gallery-track">
+              <figure class="gallery-card">
+                <img src="Baile.jpeg" alt="Presentación de baile">
+                <figcaption>Presentación de baile</figcaption>
+              </figure>
+              <figure class="gallery-card">
+                <img src="Gimnasia.jpg" alt="Rutina de gimnasia">
+                <figcaption>Rutina de gimnasia</figcaption>
+              </figure>
+              <figure class="gallery-card">
+                <img src="Gimnasia2.jpeg" alt="Otra rutina de gimnasia">
+                <figcaption>Otra rutina de gimnasia</figcaption>
+              </figure>
+            </div>
+            <button class="gallery-arrow right" aria-label="Foto siguiente">›</button>
           </div>
 
-          <button class="gallery-arrow right" aria-label="Foto siguiente">›</button>
+          <!-- Grupo 2: Básquet -->
+          <h3 class="gallery-group-title">Básquet</h3>
+          <div class="gallery-shell">
+            <button class="gallery-arrow left" aria-label="Foto anterior">‹</button>
+            <div class="gallery-track">
+              <figure class="gallery-card">
+                <img src="basquet1.jpeg" alt="Partido de básquet 1">
+                <figcaption>Partido de básquet</figcaption>
+              </figure>
+              <figure class="gallery-card">
+                <img src="basquet2.jpeg" alt="Partido de básquet 2">
+                <figcaption>Entrenamiento en la cancha</figcaption>
+              </figure>
+              <figure class="gallery-card">
+                <img src="basquet3.jpeg" alt="Partido de básquet 3">
+                <figcaption>Otra toma desde la cancha</figcaption>
+              </figure>
+              <figure class="gallery-card">
+                <img src="basquet4.jpeg" alt="Partido de básquet 4">
+                <figcaption>Porque siempre hay otro tiro</figcaption>
+              </figure>
+            </div>
+            <button class="gallery-arrow right" aria-label="Foto siguiente">›</button>
+          </div>
+
+          <!-- Grupo 3: Animalitos -->
+          <h3 class="gallery-group-title">Animalitos</h3>
+          <div class="gallery-shell">
+            <button class="gallery-arrow left" aria-label="Foto anterior">‹</button>
+            <div class="gallery-track">
+              <figure class="gallery-card">
+                <img src="Animalitos1.jpeg" alt="Animalito 1">
+                <figcaption>Compañero de aventuras</figcaption>
+              </figure>
+              <figure class="gallery-card">
+                <img src="Animalitos2.jpeg" alt="Animalito 2">
+                <figcaption>Mirada de “llévame contigo”</figcaption>
+              </figure>
+              <figure class="gallery-card">
+                <img src="Animalitos3.jpeg" alt="Animalito 3">
+                <figcaption>Momento de paz</figcaption>
+              </figure>
+              <figure class="gallery-card">
+                <img src="Animalitos4.jpeg" alt="Animalito 4">
+                <figcaption>Más amor peludo</figcaption>
+              </figure>
+            </div>
+            <button class="gallery-arrow right" aria-label="Foto siguiente">›</button>
+          </div>
+
         </div>
       </div>
     </section>
@@ -285,10 +331,9 @@
         if (ball.classList.contains('shooting')) return; // evita spameo
 
         ball.classList.add('shooting');
-        // quitar clases previas
         ball.classList.remove('shoot-left', 'shoot-center', 'shoot-right');
 
-        // forzar reflow para reiniciar animación
+        // forzar reflow
         void ball.offsetWidth;
 
         const randomClass = shotClasses[Math.floor(Math.random() * shotClasses.length)];
@@ -311,28 +356,31 @@
       });
     }
 
-    // Carrusel galería
-    const galleryTrack = document.getElementById('galleryTrack');
-    const galleryCards = document.querySelectorAll('.gallery-card');
-    const prevBtn = document.querySelector('.gallery-arrow.left');
-    const nextBtn = document.querySelector('.gallery-arrow.right');
-    let galleryIndex = 0;
+    // Carruseles de galería (varios grupos)
+    const galleryShells = document.querySelectorAll('.gallery-shell');
 
-    function scrollToCard(index) {
-      if (!galleryTrack || galleryCards.length === 0) return;
-      const safeIndex = (index + galleryCards.length) % galleryCards.length;
-      const card = galleryCards[safeIndex];
-      galleryTrack.scrollTo({
-        left: card.offsetLeft - galleryTrack.offsetLeft,
-        behavior: 'smooth'
-      });
-      galleryIndex = safeIndex;
-    }
+    galleryShells.forEach(shell => {
+      const track = shell.querySelector('.gallery-track');
+      const cards = shell.querySelectorAll('.gallery-card');
+      const prevBtn = shell.querySelector('.gallery-arrow.left');
+      const nextBtn = shell.querySelector('.gallery-arrow.right');
+      let index = 0;
 
-    if (prevBtn && nextBtn && galleryCards.length > 0) {
-      prevBtn.addEventListener('click', () => scrollToCard(galleryIndex - 1));
-      nextBtn.addEventListener('click', () => scrollToCard(galleryIndex + 1));
-    }
+      if (!track || cards.length === 0 || !prevBtn || !nextBtn) return;
+
+      function scrollToCard(i) {
+        const safeIndex = (i + cards.length) % cards.length;
+        const card = cards[safeIndex];
+        track.scrollTo({
+          left: card.offsetLeft - track.offsetLeft,
+          behavior: 'smooth'
+        });
+        index = safeIndex;
+      }
+
+      prevBtn.addEventListener('click', () => scrollToCard(index - 1));
+      nextBtn.addEventListener('click', () => scrollToCard(index + 1));
+    });
 
     // Scroll suave
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

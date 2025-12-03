@@ -91,7 +91,7 @@ body {
   color: var(--rose-light);
 }
 
-/* SECCIÓN BLANCA / LÍNEAS SUPERIORES */
+/* SECCIONES CON LÍNEA SUPERIOR */
 .white-section,
 .resume-section,
 .projects-section,
@@ -381,12 +381,25 @@ body {
   max-width: 520px;
   color: var(--text-soft);
   font-size: 0.98rem;
-  margin-bottom: 1.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.gallery-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.gallery-group-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  margin-bottom: 0.3rem;
 }
 
 .gallery-shell {
   max-width: 1050px;
-  margin: 0 auto;
+  margin: 0 auto 0.2rem;
   display: flex;
   align-items: center;
   gap: 1rem;
