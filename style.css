@@ -26,6 +26,7 @@ html {
 
 body {
   font-family: "Outfit", sans-serif;
+  font-size: 17px; /* ↑ tamaño base de texto */
   background:
     radial-gradient(circle at top left, rgba(243, 237, 255, 0.9) 0, transparent 55%),
     radial-gradient(circle at bottom right, rgba(255, 229, 241, 0.9) 0, transparent 60%),
@@ -53,7 +54,7 @@ body {
 
 .top-logo {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: var(--white);
   letter-spacing: 0.05em;
 }
@@ -67,6 +68,7 @@ body {
   text-decoration: none;
   color: var(--white);
   font-weight: 500;
+  font-size: 1rem;
   position: relative;
 }
 
@@ -155,7 +157,7 @@ body {
 
 .about-title {
   font-family: "Kalam", cursive;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   margin-bottom: 1rem;
 }
 
@@ -170,7 +172,7 @@ body {
 }
 
 .about-description {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   margin-bottom: 1rem;
 }
 
@@ -190,7 +192,7 @@ body {
 }
 
 .resume-header h2 {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
   color: var(--purple-dark);
 }
@@ -212,7 +214,7 @@ body {
 .resume-list {
   list-style: none;
   color: var(--text-dark);
-  font-size: 0.98rem;
+  font-size: 1.05rem; /* ↑ */
   line-height: 1.7;
 }
 
@@ -226,7 +228,7 @@ body {
 .software-icon {
   padding: 0.4rem 0.9rem;
   border-radius: 999px;
-  font-size: 0.85rem;
+  font-size: 0.9rem; /* ↑ */
   font-weight: 600;
   background: var(--purple-very-light);
   border: 1px solid rgba(184, 169, 232, 0.7);
@@ -257,7 +259,7 @@ body {
 
 .section-title {
   font-family: "Kalam", cursive;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   margin-bottom: 1.8rem;
 }
 
@@ -319,7 +321,7 @@ body {
   display: inline-block;
   padding: 0.25rem 0.7rem;
   border-radius: 999px;
-  font-size: 0.75rem;
+  font-size: 0.8rem; /* ↑ */
   letter-spacing: 0.04em;
   text-transform: uppercase;
   background: rgba(255, 255, 255, 0.18);
@@ -328,12 +330,12 @@ body {
 }
 
 .project-card h3 {
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   margin-bottom: 0.6rem;
 }
 
 .project-card p {
-  font-size: 0.95rem;
+  font-size: 1rem; /* ↑ */
   margin-bottom: 0.9rem;
 }
 
@@ -348,7 +350,7 @@ body {
   background: rgba(255, 255, 255, 0.22);
   padding: 0.3rem 0.7rem;
   border-radius: 20px;
-  font-size: 0.78rem;
+  font-size: 0.82rem; /* ↑ */
   border: 1px solid rgba(255,255,255,0.4);
 }
 
@@ -383,7 +385,7 @@ body {
 .gallery-subtitle {
   max-width: 520px;
   color: var(--text-soft);
-  font-size: 0.98rem;
+  font-size: 1.05rem; /* ↑ */
   margin-bottom: 1.5rem;
 }
 
@@ -394,7 +396,7 @@ body {
 }
 
 .gallery-group-title {
-  font-size: 1.1rem;
+  font-size: 1.15rem; /* ↑ */
   font-weight: 600;
   color: var(--text-soft);
   margin-bottom: 0.3rem;
@@ -451,7 +453,7 @@ body {
 
 .gallery-card figcaption {
   padding: 0.7rem 0.9rem 0.9rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem; /* ↑ */
   color: var(--text-dark);
 }
 
@@ -494,13 +496,13 @@ body {
 .contact-caption {
   max-width: 520px;
   color: var(--text-soft);
-  font-size: 0.98rem;
+  font-size: 1.05rem; /* ↑ */
   margin-bottom: 1.5rem;
 }
 
 .contacts-list {
   list-style: none;
-  font-size: 1rem;
+  font-size: 1.05rem; /* ↑ */
   max-width: 500px;
 }
 
@@ -521,7 +523,7 @@ body {
   justify-content: center;
   color: white;
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 0.85rem; /* ↑ */
 }
 
 /* Tarjeta decorativa de contacto */
@@ -549,14 +551,14 @@ body {
 
 .contact-notes-title {
   font-family: "Kalam", cursive;
-  font-size: 1.3rem;
+  font-size: 1.4rem; /* ↑ */
   margin-bottom: 0.5rem;
   color: var(--purple-dark);
   position: relative;
 }
 
 .contact-notes-text {
-  font-size: 0.95rem;
+  font-size: 1rem; /* ↑ */
   color: var(--text-soft);
   position: relative;
 }
@@ -632,7 +634,7 @@ body {
 }
 
 .game-instructions {
-  font-size: 1rem;
+  font-size: 1.05rem; /* ↑ */
   margin-bottom: 1.5rem;
   color: var(--text-soft);
 }
@@ -760,14 +762,14 @@ body {
 }
 
 .score-text {
-  font-size: 1.2rem;
+  font-size: 1.3rem; /* ↑ */
   color: var(--purple-dark);
   font-weight: 600;
 }
 
 .combo-text {
   margin-top: 0.3rem;
-  font-size: 0.95rem;
+  font-size: 1rem; /* ↑ */
   color: var(--text-soft);
   opacity: 0;
   transform: translateY(6px);
