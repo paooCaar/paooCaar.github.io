@@ -118,7 +118,10 @@ body {
 
 /* ABOUT */
 .white-section {
-  background: var(--white);
+  background:
+    radial-gradient(circle at top left, rgba(232, 221, 255, 0.7) 0, transparent 55%),
+    radial-gradient(circle at bottom right, rgba(255, 229, 241, 0.7) 0, transparent 55%),
+    var(--white);
   padding: 6rem 2rem 4rem;
 }
 
